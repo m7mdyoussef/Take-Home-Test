@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		771FC72C2C8370730091C810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771FC72B2C8370730091C810 /* Assets.xcassets */; };
+		771FC76C2C83758F0091C810 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771FC76B2C83758F0091C810 /* Color+Extension.swift */; };
 		77F458002C81FBA200A86A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F457FF2C81FBA200A86A51 /* AppDelegate.swift */; };
 		77F4580C2C81FBAC00A86A51 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 77F4580B2C81FBAC00A86A51 /* Base */; };
 		77F458212C81FBAD00A86A51 /* Take_HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458202C81FBAD00A86A51 /* Take_HomeUITests.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		771FC72B2C8370730091C810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		771FC76B2C83758F0091C810 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		77F457FC2C81FBA200A86A51 /* TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F457FF2C81FBA200A86A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F4580B2C81FBAC00A86A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				77F4587C2C830A6E00A86A51 /* ViewController+Extension.swift */,
 				77F458B92C8344D400A86A51 /* UIImage+Extension.swift */,
 				77F458BB2C8344EA00A86A51 /* String+Extension.swift */,
+				771FC76B2C83758F0091C810 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				77F458C72C83515000A86A51 /* ImageLoader.swift in Sources */,
 				77F458C42C834E8C00A86A51 /* CharacterAPIClient.swift in Sources */,
 				77F4585B2C8223C600A86A51 /* Constants.swift in Sources */,
+				771FC76C2C83758F0091C810 /* Color+Extension.swift in Sources */,
 				77F4589C2C833FAE00A86A51 /* CharacterRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

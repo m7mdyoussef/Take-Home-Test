@@ -18,18 +18,18 @@ struct CharacterDetailView: View {
             
             VStack(alignment: .leading, spacing: 8){
                 HStack {
-                    CharacterText(text: character.name ?? "", fontSize: 26, color: .heavyText, weight: .semibold)
+                    CharacterText(text: character.name ?? "", fontSize: 26, color: .heavyTextColor, weight: .semibold)
                         .lineLimit(2, reservesSpace: false)
                     Spacer()
-                    CharacterText(text: character.status ?? "", fontSize: 16, color: .heavyText, weight: .medium)
+                    CharacterText(text: character.status ?? "", fontSize: 16, color: .heavyTextColor, weight: .medium)
                                   .padding(.vertical, 6)
                                   .padding(.horizontal, 14)
-                                  .background(Color.status)
+                                  .background(Color.statusColor)
                                   .clipShape(Capsule())
                 }
                 HStack(spacing: 0) {
-                    CharacterText(text: "\(character.species ?? "") • ", fontSize: 18, color: .meduimText, weight: .semibold)
-                    CharacterText(text: "\(character.gender ?? "")", fontSize: 18, color: .lighttext, weight: .semibold)
+                    CharacterText(text: "\(character.species ?? "") • ", fontSize: 18, color: .mediumTextColor, weight: .semibold)
+                    CharacterText(text: "\(character.gender ?? "")", fontSize: 18, color: .lightTextColor, weight: .semibold)
                     Spacer()
                 }
             }
@@ -37,8 +37,8 @@ struct CharacterDetailView: View {
             .padding()
             
             HStack(spacing: 0) {
-                CharacterText(text: Constants.CharacterDetails.location, fontSize: 18, color: .heavyText, weight: .semibold)
-                CharacterText(text: character.location?.name ?? "" , fontSize: 18, color: .meduimText, weight: .semibold)
+                CharacterText(text: Constants.CharacterDetails.location, fontSize: 18, color: .heavyTextColor, weight: .semibold)
+                CharacterText(text: character.location?.name ?? "" , fontSize: 18, color: .mediumTextColor, weight: .semibold)
             }
             .padding(.horizontal, 16)
 

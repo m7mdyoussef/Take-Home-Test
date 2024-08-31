@@ -13,7 +13,7 @@ struct FilterCellView: View {
 
     var body: some View {
         
-        CharacterText(text: filterName, color: .heavyText)
+        CharacterText(text: filterName, color: .heavyTextColor)
             .padding(.horizontal, 8)
             .padding(.vertical, 4)
             .overlay(
