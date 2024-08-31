@@ -8,7 +8,6 @@
 import UIKit
 import SwiftUI
 
-
 class AppCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController
     
@@ -17,7 +16,8 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-
+        let nextViewController = Injector.CharacterListViewController(coordinator: self)
+        navigationController.pushViewController(nextViewController, animated: false)
     }
     
     func dismiss() {
@@ -33,7 +33,7 @@ class AppCoordinator: CoordinatorProtocol {
             self.navigationController.dismiss(animated: true)
         }
     }
-    
+            
     func navigateToNextScreen(destination: DestinationScreens){
         switch destination{
         case .Splash:
@@ -47,7 +47,8 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     private func openCharacterListScreen() {
-
+        let nextViewController = Injector.CharacterListViewController(coordinator: self)
+        navigationController.pushViewController(nextViewController, animated: false)
     }
     
     private func openCharacterDetailsScreen(character: Character) {

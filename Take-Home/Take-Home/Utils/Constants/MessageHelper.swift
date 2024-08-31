@@ -19,5 +19,6 @@ struct MessageHelper {
         static let clientError: String = "Request doesn't seem to be proper."
         static let invalidResponse: String = "Invalid Server Response"
         static let unauthorizedClient: String = "Unauthorized Client"
+        static let decodingError: String = "Unable to decode Data"
     }
 }

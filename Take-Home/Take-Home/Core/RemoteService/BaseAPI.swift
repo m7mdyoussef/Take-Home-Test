@@ -7,18 +7,13 @@
 
 import Foundation
 
-// Protocol for API client
-protocol APIClient {
-    associatedtype T: TargetType
-    // Method to fetch data with a decodable response type
-    func fetchData<M: Decodable>(target: T, completion: @escaping (Result<M?, APIError>) -> Void)
-    // Method to cancel any ongoing requests
-    func cancelAnyRequest()
+protocol CharacterAPIClient {
+    func fetchData<M: Decodable>(target: ApplicationNetworking, completion: @escaping (Result<M?, APIError>) -> Void)
 }
 
-class BaseAPI<T: TargetType>: APIClient {
-    
-    func fetchData<M: Decodable>(target: T , completion: @escaping (Result<M?, APIError>) -> Void) {
+class APIClient: CharacterAPIClient {
+
+    func fetchData<M: Decodable>(target: ApplicationNetworking, completion: @escaping (Result<M?, APIError>) -> Void) {
         let urlString = target.baseURL + target.path
         guard let url = URL(string: urlString) else {
             completion(.failure(.general))
@@ -36,31 +31,45 @@ class BaseAPI<T: TargetType>: APIClient {
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error as? URLError {
-                completion(.failure(.urlError(error)))
+            
+            // Handle network-related errors
+            if let error = error as NSError? {
+                switch error.code {
+                case NSURLErrorTimedOut:
+                    completion(.failure(.timeout))
+                case NSURLErrorNotConnectedToInternet:
+                    completion(.failure(.noNetwork))
+                default:
+                    completion(.failure(.unknownError))
+                }
                 return
             }
             
+            // Handle HTTP response
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.noNetwork))
                 return
             }
             
-            guard (200...299).contains(httpResponse.statusCode) else {
-                completion(.failure(.httpError(httpResponse)))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.noData))
-                return
-            }
-            
-            do {
-                let responseObject = try JSONDecoder().decode(M.self, from: data)
-                completion(.success(responseObject))
-            } catch {
-                completion(.failure(.decodingError(error)))
+            // Handle different status code ranges
+            if (200...299).contains(httpResponse.statusCode) {
+                // Attempt to decode the data if status is success
+                guard let data = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                
+                do {
+                    let responseObject = try JSONDecoder().decode(M.self, from: data)
+                    completion(.success(responseObject))
+                } catch {
+                    completion(.failure(.decodingError))
+                }
+                
+            } else {
+                // Map HTTP status code to appropriate APIError
+                let error = APIClient.errorType(type: httpResponse.statusCode)
+                completion(.failure(error))
             }
         }
         

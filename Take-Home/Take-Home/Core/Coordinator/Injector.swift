@@ -9,4 +9,13 @@ import UIKit
 
 class Injector {
     
+    static func CharacterListViewController(coordinator: CoordinatorProtocol) -> CharacterListViewController {
+        let repo = CharacterRepositoryImpl()
+        let usecase = FetchCharactersUseCaseImpl(repository: repo)
+        let viewModel = CharacterListViewModel(coordinator: coordinator, fetchCharactersUseCase: usecase)
+        let viewcontroller = Take_Home.CharacterListViewController.instantiateFromStoryBoard(appStoryBoard: .characters)
+        viewcontroller.viewModel = viewModel
+        return viewcontroller
+    }
+    
 }
