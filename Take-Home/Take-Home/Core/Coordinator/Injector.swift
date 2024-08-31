@@ -13,7 +13,7 @@ class Injector {
         let repo = CharacterRepositoryImpl()
         let usecase = FetchCharactersUseCaseImpl(repository: repo)
         let viewModel = CharacterListViewModel(coordinator: coordinator, fetchCharactersUseCase: usecase)
-        let viewcontroller = Take_Home.CharacterListViewController.instantiateFromStoryBoard(appStoryBoard: .characters)
+        let viewcontroller = TakeHome.CharacterListViewController.instantiateFromStoryBoard(appStoryBoard: .characters)
         viewcontroller.viewModel = viewModel
         return viewcontroller
     }
