@@ -12,4 +12,9 @@ Navigation using Coordinator pattern.
 Repository Pattern to Handle Data Layer.
 use Case Pattern to Response Data.
 Unit Testing.
+
 Features:-
+* Users should be able to view list of characters in a paginated manner using GET API: https://rickandmortyapi.com/api/character/
+* Pagination should be based on infinite scroll.
+*  Users should be able to filter list of characters by keywords [alive, dead or unknown].
+* Users should be able to view a details View for each character.
