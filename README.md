@@ -1,6 +1,6 @@
 # Take-Home-Test
 
-iOS app in SwiftUI & UiKit and Binding that helps the user explore Characters List in an easy manner using clean Archticture MVVM-C with coordinator pattern.
+iOS app in SwiftUI & UiKit {combine and Binding} that helps the user explore Characters List in an easy manner using clean Archticture MVVM-C with coordinator pattern.
 
 Used technology stack in the code:
 
@@ -16,5 +16,5 @@ Unit Testing.
 Features:-
 * Users should be able to view list of characters in a paginated manner using GET API: https://rickandmortyapi.com/api/character/
 * Pagination should be based on infinite scroll.
-*  Users should be able to filter list of characters by keywords [alive, dead or unknown].
+* Users should be able to filter list of characters by keywords [alive, dead or unknown].
 * Users should be able to view a details View for each character.
