@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol FetchCharactersUseCase {
+    func execute(page: String, count: String, status: String ,completion: @escaping (Result<CharactersResponse?, APIError>) -> Void)
+}

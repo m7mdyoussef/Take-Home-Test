@@ -6,3 +6,6 @@
 //
 
 import Foundation
+protocol CharacterRepository {
+    func fetchCharacters(page: String, count:String, status: String, completion: @escaping (Result<CharactersResponse?, APIError>) -> Void)
+}

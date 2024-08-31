@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol CharacterAPIClient {
+    func fetchData<M: Decodable>(target: ApplicationNetworking, completion: @escaping (Result<M?, APIError>) -> Void)
+}
