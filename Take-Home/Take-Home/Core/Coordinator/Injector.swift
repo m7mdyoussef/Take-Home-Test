@@ -18,4 +18,7 @@ class Injector {
         return viewcontroller
     }
     
+    static func getCharacterDetailsView(coordinator: CoordinatorProtocol, character: Character) -> CharacterDetailView {
+        return CharacterDetailView(character: character, coordinator: coordinator)
+    }
 }
