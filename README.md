@@ -1,4 +1,4 @@
-# Take-Home-Test
+# Take-Home-Test - master Branch
 
 iOS app in SwiftUI & UiKit {combine and Binding} that helps the user explore Characters List in an easy manner using clean Archticture MVVM-C with coordinator pattern.
 
