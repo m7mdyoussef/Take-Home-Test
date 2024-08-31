@@ -16,9 +16,23 @@ protocol CoordinatorProtocol: AnyObject {
     func navigateToRoot()
 }
 
-
 enum DestinationScreens{
     case Splash
     case CharactersList
     case Details(Character)
+}
+
+extension DestinationScreens: Equatable{
+    static func == (lhs: DestinationScreens, rhs: DestinationScreens) -> Bool {
+        switch (lhs, rhs) {
+        case (.Splash, .Splash):
+            return true
+        case (.CharactersList, .CharactersList):
+            return true
+        case (.Details(let lhsCharacter), .Details(let rhsCharacter)):
+            return lhsCharacter == rhsCharacter
+        default:
+            return false
+        }
+    }
 }
