@@ -38,6 +38,8 @@
 		77F458B42C83415400A86A51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458B32C83415400A86A51 /* BaseViewController.swift */; };
 		77F458B62C83419600A86A51 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458B52C83419600A86A51 /* CharacterListViewModel.swift */; };
 		77F458B82C8341BA00A86A51 /* CharacterListViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458B72C8341BA00A86A51 /* CharacterListViewModelContract.swift */; };
+		77F458BA2C8344D400A86A51 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458B92C8344D400A86A51 /* UIImage+Extension.swift */; };
+		77F458BC2C8344EA00A86A51 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458BB2C8344EA00A86A51 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		77F458B32C83415400A86A51 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		77F458B52C83419600A86A51 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		77F458B72C8341BA00A86A51 /* CharacterListViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelContract.swift; sourceTree = "<group>"; };
+		77F458B92C8344D400A86A51 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		77F458BB2C8344EA00A86A51 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				77F4587C2C830A6E00A86A51 /* ViewController+Extension.swift */,
+				77F458B92C8344D400A86A51 /* UIImage+Extension.swift */,
+				77F458BB2C8344EA00A86A51 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -553,11 +559,13 @@
 				77F4585F2C8224B500A86A51 /* CharactersResponse.swift in Sources */,
 				77F458572C82235C00A86A51 /* BaseAPI.swift in Sources */,
 				77F458AE2C8340CA00A86A51 /* CharacterText.swift in Sources */,
+				77F458BA2C8344D400A86A51 /* UIImage+Extension.swift in Sources */,
 				77F4587D2C830A6E00A86A51 /* ViewController+Extension.swift in Sources */,
 				77F458B22C83411600A86A51 /* BaseViewModelContract.swift in Sources */,
 				77F458002C81FBA200A86A51 /* AppDelegate.swift in Sources */,
 				77F458772C8309B200A86A51 /* Injector.swift in Sources */,
 				77F458792C830A0B00A86A51 /* CoordinatorProtocol.swift in Sources */,
+				77F458BC2C8344EA00A86A51 /* String+Extension.swift in Sources */,
 				77F458AB2C8340CA00A86A51 /* CharacterCellView.swift in Sources */,
 				77F458592C82237700A86A51 /* APIError.swift in Sources */,
 				77F458752C83093400A86A51 /* AppCoordinator.swift in Sources */,
@@ -745,7 +753,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -777,7 +785,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
