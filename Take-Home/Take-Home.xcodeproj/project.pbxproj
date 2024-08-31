@@ -20,6 +20,11 @@
 		77F4585B2C8223C600A86A51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4585A2C8223C600A86A51 /* Constants.swift */; };
 		77F4585D2C8223F100A86A51 /* MessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4585C2C8223F100A86A51 /* MessageHelper.swift */; };
 		77F4585F2C8224B500A86A51 /* CharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4585E2C8224B500A86A51 /* CharactersResponse.swift */; };
+		77F458752C83093400A86A51 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458742C83093400A86A51 /* AppCoordinator.swift */; };
+		77F458772C8309B200A86A51 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458762C8309B200A86A51 /* Injector.swift */; };
+		77F458792C830A0B00A86A51 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458782C830A0B00A86A51 /* CoordinatorProtocol.swift */; };
+		77F4587B2C830A2100A86A51 /* StoryBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4587A2C830A2100A86A51 /* StoryBoards.swift */; };
+		77F4587D2C830A6E00A86A51 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4587C2C830A6E00A86A51 /* ViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		77F4585A2C8223C600A86A51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		77F4585C2C8223F100A86A51 /* MessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHelper.swift; sourceTree = "<group>"; };
 		77F4585E2C8224B500A86A51 /* CharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResponse.swift; sourceTree = "<group>"; };
+		77F458742C83093400A86A51 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		77F458762C8309B200A86A51 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		77F458782C830A0B00A86A51 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		77F4587A2C830A2100A86A51 /* StoryBoards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoards.swift; sourceTree = "<group>"; };
+		77F4587C2C830A6E00A86A51 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +272,10 @@
 		77F4583E2C81FDB500A86A51 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				77F458742C83093400A86A51 /* AppCoordinator.swift */,
+				77F458782C830A0B00A86A51 /* CoordinatorProtocol.swift */,
+				77F458762C8309B200A86A51 /* Injector.swift */,
+				77F4587A2C830A2100A86A51 /* StoryBoards.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -294,6 +308,7 @@
 		77F458422C81FDEB00A86A51 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77F4587C2C830A6E00A86A51 /* ViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -437,12 +452,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F4587B2C830A2100A86A51 /* StoryBoards.swift in Sources */,
 				77F4585D2C8223F100A86A51 /* MessageHelper.swift in Sources */,
 				77F458532C82231600A86A51 /* TargetType.swift in Sources */,
 				77F4585F2C8224B500A86A51 /* CharactersResponse.swift in Sources */,
 				77F458572C82235C00A86A51 /* BaseAPI.swift in Sources */,
+				77F4587D2C830A6E00A86A51 /* ViewController+Extension.swift in Sources */,
 				77F458002C81FBA200A86A51 /* AppDelegate.swift in Sources */,
+				77F458772C8309B200A86A51 /* Injector.swift in Sources */,
+				77F458792C830A0B00A86A51 /* CoordinatorProtocol.swift in Sources */,
 				77F458592C82237700A86A51 /* APIError.swift in Sources */,
+				77F458752C83093400A86A51 /* AppCoordinator.swift in Sources */,
 				77F458552C82233900A86A51 /* ApplicationNetworking.swift in Sources */,
 				77F4585B2C8223C600A86A51 /* Constants.swift in Sources */,
 			);
