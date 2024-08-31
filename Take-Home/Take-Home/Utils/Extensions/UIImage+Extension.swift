@@ -21,5 +21,6 @@ extension UIImage {
 extension Image {
     enum Character {
         static let imagePlaceholder = "imagePlaceHolder".image
+        static let placeholder = "placeHolder".image
     }
 }
