@@ -17,4 +17,26 @@ enum Constants{
         static let status = "status"
     }
     
+    enum ProgressComponents {
+        static let loading = "loading..."
+    }
+    
+    enum NavigationBar {
+        static let Character = "Character"
+    }
+    
+    enum ReusableCell {
+        static let Cell = "cell"
+    }
+    
+    enum Alert {
+        static let Error = "Error"
+        static let Ok = "OK"
+    }
+    
+    enum CharacterDetails {
+        static let location = "Location :  "
+    }
+    
 }
+
