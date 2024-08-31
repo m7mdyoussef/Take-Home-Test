@@ -52,6 +52,8 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     private func openCharacterDetailsScreen(character: Character) {
-
+        let characterDetailsView = Injector.getCharacterDetailsView(coordinator: self, character: character)
+        let hostingController = UIHostingController(rootView: characterDetailsView)
+        navigationController.pushViewController(hostingController, animated: true)
     }
 }
