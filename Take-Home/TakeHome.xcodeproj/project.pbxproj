@@ -10,7 +10,6 @@
 		77F458002C81FBA200A86A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F457FF2C81FBA200A86A51 /* AppDelegate.swift */; };
 		77F458092C81FBAC00A86A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F458082C81FBAC00A86A51 /* Assets.xcassets */; };
 		77F4580C2C81FBAC00A86A51 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 77F4580B2C81FBAC00A86A51 /* Base */; };
-		77F458172C81FBAD00A86A51 /* Take_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458162C81FBAD00A86A51 /* Take_HomeTests.swift */; };
 		77F458212C81FBAD00A86A51 /* Take_HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458202C81FBAD00A86A51 /* Take_HomeUITests.swift */; };
 		77F458232C81FBAD00A86A51 /* Take_HomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458222C81FBAD00A86A51 /* Take_HomeUITestsLaunchTests.swift */; };
 		77F458532C82231600A86A51 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458522C82231600A86A51 /* TargetType.swift */; };
@@ -45,6 +44,14 @@
 		77F458C42C834E8C00A86A51 /* CharacterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C32C834E8C00A86A51 /* CharacterAPIClient.swift */; };
 		77F458C72C83515000A86A51 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C62C83515000A86A51 /* ImageLoader.swift */; };
 		77F458C92C8351D300A86A51 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C82C8351D300A86A51 /* AsyncImageView.swift */; };
+		77F458CC2C835A8E00A86A51 /* MockFetchCharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458CB2C835A8E00A86A51 /* MockFetchCharactersUseCase.swift */; };
+		77F458CE2C835C2E00A86A51 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458CD2C835C2E00A86A51 /* MockCoordinator.swift */; };
+		77F458D42C835C9800A86A51 /* FetchCharactersUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458D32C835C9800A86A51 /* FetchCharactersUseCaseTest.swift */; };
+		77F458D62C835CBA00A86A51 /* MockCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458D52C835CBA00A86A51 /* MockCharacterRepository.swift */; };
+		77F458D82C835CDA00A86A51 /* MockCharacterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458D72C835CDA00A86A51 /* MockCharacterAPIClient.swift */; };
+		77F458DA2C835CF500A86A51 /* CharacterRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458D92C835CF500A86A51 /* CharacterRepositoryTest.swift */; };
+		77F458DD2C835D2800A86A51 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458DC2C835D2800A86A51 /* MockData.swift */; };
+		77F458E02C835D5700A86A51 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458DF2C835D5700A86A51 /* CharacterListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,14 +72,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		77F457FC2C81FBA200A86A51 /* Take-Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take-Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F457FC2C81FBA200A86A51 /* TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F457FF2C81FBA200A86A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F458082C81FBAC00A86A51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77F4580B2C81FBAC00A86A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77F4580D2C81FBAC00A86A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77F458122C81FBAC00A86A51 /* Take-HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take-HomeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		77F458162C81FBAD00A86A51 /* Take_HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_HomeTests.swift; sourceTree = "<group>"; };
-		77F4581C2C81FBAD00A86A51 /* Take-HomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take-HomeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F458122C81FBAC00A86A51 /* TakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F4581C2C81FBAD00A86A51 /* TakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F458202C81FBAD00A86A51 /* Take_HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_HomeUITests.swift; sourceTree = "<group>"; };
 		77F458222C81FBAD00A86A51 /* Take_HomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_HomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		77F458522C82231600A86A51 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -107,6 +113,14 @@
 		77F458C32C834E8C00A86A51 /* CharacterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPIClient.swift; sourceTree = "<group>"; };
 		77F458C62C83515000A86A51 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		77F458C82C8351D300A86A51 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		77F458CB2C835A8E00A86A51 /* MockFetchCharactersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchCharactersUseCase.swift; sourceTree = "<group>"; };
+		77F458CD2C835C2E00A86A51 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
+		77F458D32C835C9800A86A51 /* FetchCharactersUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCaseTest.swift; sourceTree = "<group>"; };
+		77F458D52C835CBA00A86A51 /* MockCharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterRepository.swift; sourceTree = "<group>"; };
+		77F458D72C835CDA00A86A51 /* MockCharacterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterAPIClient.swift; sourceTree = "<group>"; };
+		77F458D92C835CF500A86A51 /* CharacterRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryTest.swift; sourceTree = "<group>"; };
+		77F458DC2C835D2800A86A51 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		77F458DF2C835D5700A86A51 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +161,9 @@
 		77F457FD2C81FBA200A86A51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77F457FC2C81FBA200A86A51 /* Take-Home.app */,
-				77F458122C81FBAC00A86A51 /* Take-HomeTests.xctest */,
-				77F4581C2C81FBAD00A86A51 /* Take-HomeUITests.xctest */,
+				77F457FC2C81FBA200A86A51 /* TakeHome.app */,
+				77F458122C81FBAC00A86A51 /* TakeHomeTests.xctest */,
+				77F4581C2C81FBAD00A86A51 /* TakeHomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,7 +183,10 @@
 		77F458152C81FBAD00A86A51 /* Take-HomeTests */ = {
 			isa = PBXGroup;
 			children = (
-				77F458162C81FBAD00A86A51 /* Take_HomeTests.swift */,
+				77F458DE2C835D3E00A86A51 /* Presentation */,
+				77F458DB2C835D1000A86A51 /* Data */,
+				77F458CF2C835C6300A86A51 /* Domain */,
+				77F458CA2C835A7900A86A51 /* Mock */,
 			);
 			path = "Take-HomeTests";
 			sourceTree = "<group>";
@@ -438,12 +455,64 @@
 			path = ImageLoader;
 			sourceTree = "<group>";
 		};
+		77F458CA2C835A7900A86A51 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				77F458CB2C835A8E00A86A51 /* MockFetchCharactersUseCase.swift */,
+				77F458D52C835CBA00A86A51 /* MockCharacterRepository.swift */,
+				77F458D72C835CDA00A86A51 /* MockCharacterAPIClient.swift */,
+				77F458CD2C835C2E00A86A51 /* MockCoordinator.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		77F458CF2C835C6300A86A51 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				77F458D02C835C6E00A86A51 /* UseCase */,
+				77F458D12C835C7800A86A51 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		77F458D02C835C6E00A86A51 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				77F458D32C835C9800A86A51 /* FetchCharactersUseCaseTest.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		77F458D12C835C7800A86A51 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				77F458D92C835CF500A86A51 /* CharacterRepositoryTest.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		77F458DB2C835D1000A86A51 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				77F458DC2C835D2800A86A51 /* MockData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		77F458DE2C835D3E00A86A51 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				77F458DF2C835D5700A86A51 /* CharacterListViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		77F457FB2C81FBA200A86A51 /* Take-Home */ = {
+		77F457FB2C81FBA200A86A51 /* TakeHome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F458262C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "Take-Home" */;
+			buildConfigurationList = 77F458262C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "TakeHome" */;
 			buildPhases = (
 				77F457F82C81FBA200A86A51 /* Sources */,
 				77F457F92C81FBA200A86A51 /* Frameworks */,
@@ -453,14 +522,14 @@
 			);
 			dependencies = (
 			);
-			name = "Take-Home";
+			name = TakeHome;
 			productName = "Take-Home";
-			productReference = 77F457FC2C81FBA200A86A51 /* Take-Home.app */;
+			productReference = 77F457FC2C81FBA200A86A51 /* TakeHome.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77F458112C81FBAC00A86A51 /* Take-HomeTests */ = {
+		77F458112C81FBAC00A86A51 /* TakeHomeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F458292C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "Take-HomeTests" */;
+			buildConfigurationList = 77F458292C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "TakeHomeTests" */;
 			buildPhases = (
 				77F4580E2C81FBAC00A86A51 /* Sources */,
 				77F4580F2C81FBAC00A86A51 /* Frameworks */,
@@ -471,14 +540,14 @@
 			dependencies = (
 				77F458142C81FBAC00A86A51 /* PBXTargetDependency */,
 			);
-			name = "Take-HomeTests";
+			name = TakeHomeTests;
 			productName = "Take-HomeTests";
-			productReference = 77F458122C81FBAC00A86A51 /* Take-HomeTests.xctest */;
+			productReference = 77F458122C81FBAC00A86A51 /* TakeHomeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		77F4581B2C81FBAD00A86A51 /* Take-HomeUITests */ = {
+		77F4581B2C81FBAD00A86A51 /* TakeHomeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77F4582C2C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "Take-HomeUITests" */;
+			buildConfigurationList = 77F4582C2C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "TakeHomeUITests" */;
 			buildPhases = (
 				77F458182C81FBAD00A86A51 /* Sources */,
 				77F458192C81FBAD00A86A51 /* Frameworks */,
@@ -489,9 +558,9 @@
 			dependencies = (
 				77F4581E2C81FBAD00A86A51 /* PBXTargetDependency */,
 			);
-			name = "Take-HomeUITests";
+			name = TakeHomeUITests;
 			productName = "Take-HomeUITests";
-			productReference = 77F4581C2C81FBAD00A86A51 /* Take-HomeUITests.xctest */;
+			productReference = 77F4581C2C81FBAD00A86A51 /* TakeHomeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -517,7 +586,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 77F457F72C81FBA200A86A51 /* Build configuration list for PBXProject "Take-Home" */;
+			buildConfigurationList = 77F457F72C81FBA200A86A51 /* Build configuration list for PBXProject "TakeHome" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -530,9 +599,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				77F457FB2C81FBA200A86A51 /* Take-Home */,
-				77F458112C81FBAC00A86A51 /* Take-HomeTests */,
-				77F4581B2C81FBAD00A86A51 /* Take-HomeUITests */,
+				77F457FB2C81FBA200A86A51 /* TakeHome */,
+				77F458112C81FBAC00A86A51 /* TakeHomeTests */,
+				77F4581B2C81FBAD00A86A51 /* TakeHomeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -608,7 +677,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F458172C81FBAD00A86A51 /* Take_HomeTests.swift in Sources */,
+				77F458CE2C835C2E00A86A51 /* MockCoordinator.swift in Sources */,
+				77F458D42C835C9800A86A51 /* FetchCharactersUseCaseTest.swift in Sources */,
+				77F458CC2C835A8E00A86A51 /* MockFetchCharactersUseCase.swift in Sources */,
+				77F458D62C835CBA00A86A51 /* MockCharacterRepository.swift in Sources */,
+				77F458E02C835D5700A86A51 /* CharacterListViewModelTests.swift in Sources */,
+				77F458D82C835CDA00A86A51 /* MockCharacterAPIClient.swift in Sources */,
+				77F458DD2C835D2800A86A51 /* MockData.swift in Sources */,
+				77F458DA2C835CF500A86A51 /* CharacterRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,12 +702,12 @@
 /* Begin PBXTargetDependency section */
 		77F458142C81FBAC00A86A51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77F457FB2C81FBA200A86A51 /* Take-Home */;
+			target = 77F457FB2C81FBA200A86A51 /* TakeHome */;
 			targetProxy = 77F458132C81FBAC00A86A51 /* PBXContainerItemProxy */;
 		};
 		77F4581E2C81FBAD00A86A51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77F457FB2C81FBA200A86A51 /* Take-Home */;
+			target = 77F457FB2C81FBA200A86A51 /* TakeHome */;
 			targetProxy = 77F4581D2C81FBAD00A86A51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -846,7 +922,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Take-Home.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Take-Home";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakeHome";
 			};
 			name = Debug;
 		};
@@ -865,7 +941,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Take-Home.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Take-Home";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakeHome";
 			};
 			name = Release;
 		};
@@ -906,7 +982,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		77F457F72C81FBA200A86A51 /* Build configuration list for PBXProject "Take-Home" */ = {
+		77F457F72C81FBA200A86A51 /* Build configuration list for PBXProject "TakeHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F458242C81FBAD00A86A51 /* Debug */,
@@ -915,7 +991,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F458262C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "Take-Home" */ = {
+		77F458262C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "TakeHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F458272C81FBAD00A86A51 /* Debug */,
@@ -924,7 +1000,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F458292C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "Take-HomeTests" */ = {
+		77F458292C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "TakeHomeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F4582A2C81FBAD00A86A51 /* Debug */,
@@ -933,7 +1009,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77F4582C2C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "Take-HomeUITests" */ = {
+		77F4582C2C81FBAD00A86A51 /* Build configuration list for PBXNativeTarget "TakeHomeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77F4582D2C81FBAD00A86A51 /* Debug */,
