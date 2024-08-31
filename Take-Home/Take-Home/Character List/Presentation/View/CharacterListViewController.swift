@@ -37,15 +37,18 @@ class CharacterListViewController: BaseViewController {
     
     private func bindViewModel() {
         viewModel.updateView = { [weak self] in
-            self?.updateUI()
+            guard let self else {return}
+            updateUI()
         }
         
         viewModel.updateLoadingState = { [weak self] isLoading in
-            self?.toggleLoader(isLoading)
+            guard let self else {return}
+            toggleLoader(isLoading)
         }
         
         viewModel.showErrorAlert = { [weak self] message in
-            self?.showAlert(message: message)
+            guard let self else {return}
+            showAlert(message: message)
         }
     }
 
@@ -178,6 +181,7 @@ extension CharacterListViewController{
         DispatchQueue.main.async {
             self.alertManager.isVisible = false
             self.alertHostingController?.view.isHidden = !self.alertManager.isVisible
+            self.viewModel.loadCharacters(status: self.selectedFilter ?? CharacterStatus.All.rawValue)
         }
     }
 }

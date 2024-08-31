@@ -25,7 +25,8 @@ class ImageLoader: ObservableObject {
             }
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] resizedImage in
-                self?.image = resizedImage
+                guard let self else {return}
+                self.image = resizedImage
             })
     }
 

@@ -40,19 +40,20 @@ class CharacterListViewModel: CharacterListViewModelContract  {
         }
         
         fetchCharactersUseCase.execute(page: "\(currentPage)", count: "\(pageCount)", status: status) { [weak self] result in
+            guard let self else {return}
             DispatchQueue.main.async {
-                self?.isLoading = false
+                self.isLoading = false
                 switch result {
                 case .success(let result):
                     if let result = result {
-                        self?.characters.append(contentsOf: result.results ?? [])
-                        self?.currentPage += 1
-                        self?.maxPages = result.info?.pages ?? 1
-                        self?.filterStatus = status
+                        self.characters.append(contentsOf: result.results ?? [])
+                        self.currentPage += 1
+                        self.maxPages = result.info?.pages ?? 1
+                        self.filterStatus = status
                     }
-                    self?.updateView?()
+                    self.updateView?()
                 case .failure(let error):
-                    self?.showErrorAlert?(error.desc)
+                    self.showErrorAlert?(error.desc)
                 }
             }
         }

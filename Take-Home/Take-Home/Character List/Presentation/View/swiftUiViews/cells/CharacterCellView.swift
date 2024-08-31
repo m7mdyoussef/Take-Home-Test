@@ -18,9 +18,9 @@ struct CharacterCellView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
 
             VStack(alignment: .leading, spacing: 4) {
-                CharacterText(text: character.name ?? "", fontSize: 16, color: .heavyTextColor, weight: .semibold)
+                CharacterText(text: character.name ?? "", fontSize: 16, color: .heavyText, weight: .semibold)
                 
-                CharacterText(text: character.species ?? "", color: .mediumTextColor, weight: .medium)
+                CharacterText(text: character.species ?? "", color: .meduimText, weight: .medium)
 
                 Spacer()
             }
@@ -45,9 +45,9 @@ struct CharacterCellView: View {
         
         switch status {
         case .dead:
-            return Color.deadColor
+            return Color.dead
         case .alive:
-            return Color.aliveColor
+            return Color.alive
         case .unknown:
             return Color.white
         default:
