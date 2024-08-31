@@ -19,6 +19,7 @@ struct CharacterDetailView: View {
             VStack(alignment: .leading, spacing: 8){
                 HStack {
                     CharacterText(text: character.name ?? "", fontSize: 26, color: .heavyText, weight: .semibold)
+                        .lineLimit(2, reservesSpace: false)
                     Spacer()
                     CharacterText(text: character.status ?? "", fontSize: 16, color: .heavyText, weight: .medium)
                                   .padding(.vertical, 6)
@@ -71,23 +72,12 @@ extension CharacterDetailView{
     }
     
     private var imageSection : some View{
-        AsyncImage(url: URL(string: character.image ?? "")) { image in
-            image
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: UIScreen.main.bounds.width)
-                .frame(height: UIScreen.main.bounds.height * 0.45)
-                .cornerRadius(40)
-                .clipped()
-        } placeholder: {
-            Image.Character.placeholder
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: UIScreen.main.bounds.width)
-                .frame(height: UIScreen.main.bounds.height * 0.45)
-                .cornerRadius(40)
-                .clipped()
-        }
+        
+        AsyncImageView(urlString: character.image, targetSize: CGSize(width: 70, height: 70))
+            .frame(maxWidth: UIScreen.main.bounds.width)
+            .frame(height: UIScreen.main.bounds.height * 0.45)
+            .cornerRadius(40)
+            .clipped()
     }
 }
 

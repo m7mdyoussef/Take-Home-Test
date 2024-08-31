@@ -43,6 +43,8 @@
 		77F458C02C834E1500A86A51 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458BF2C834E1500A86A51 /* CharacterRepository.swift */; };
 		77F458C22C834E4200A86A51 /* FetchCharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C12C834E4200A86A51 /* FetchCharactersUseCase.swift */; };
 		77F458C42C834E8C00A86A51 /* CharacterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C32C834E8C00A86A51 /* CharacterAPIClient.swift */; };
+		77F458C72C83515000A86A51 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C62C83515000A86A51 /* ImageLoader.swift */; };
+		77F458C92C8351D300A86A51 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F458C82C8351D300A86A51 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		77F458BF2C834E1500A86A51 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		77F458C12C834E4200A86A51 /* FetchCharactersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCase.swift; sourceTree = "<group>"; };
 		77F458C32C834E8C00A86A51 /* CharacterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAPIClient.swift; sourceTree = "<group>"; };
+		77F458C62C83515000A86A51 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		77F458C82C8351D300A86A51 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +412,7 @@
 		77F458A72C8340CA00A86A51 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				77F458C52C83514100A86A51 /* ImageLoader */,
 				77F458A22C8340CA00A86A51 /* Alert */,
 				77F458A42C8340CA00A86A51 /* Custom Text */,
 				77F458A62C8340CA00A86A51 /* Loader */,
@@ -422,6 +427,15 @@
 				77F458A72C8340CA00A86A51 /* Components */,
 			);
 			path = swiftUiViews;
+			sourceTree = "<group>";
+		};
+		77F458C52C83514100A86A51 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				77F458C62C83515000A86A51 /* ImageLoader.swift */,
+				77F458C82C8351D300A86A51 /* AsyncImageView.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,6 +580,7 @@
 				77F458B02C8340CA00A86A51 /* CharacterListViewController.swift in Sources */,
 				77F4585D2C8223F100A86A51 /* MessageHelper.swift in Sources */,
 				77F458532C82231600A86A51 /* TargetType.swift in Sources */,
+				77F458C92C8351D300A86A51 /* AsyncImageView.swift in Sources */,
 				77F4585F2C8224B500A86A51 /* CharactersResponse.swift in Sources */,
 				77F458572C82235C00A86A51 /* APIClient.swift in Sources */,
 				77F458AE2C8340CA00A86A51 /* CharacterText.swift in Sources */,
@@ -582,6 +597,7 @@
 				77F458552C82233900A86A51 /* ApplicationNetworking.swift in Sources */,
 				77F458AF2C8340CA00A86A51 /* LoaderView.swift in Sources */,
 				77F458C02C834E1500A86A51 /* CharacterRepository.swift in Sources */,
+				77F458C72C83515000A86A51 /* ImageLoader.swift in Sources */,
 				77F458C42C834E8C00A86A51 /* CharacterAPIClient.swift in Sources */,
 				77F4585B2C8223C600A86A51 /* Constants.swift in Sources */,
 				77F4589C2C833FAE00A86A51 /* CharacterRepositoryImpl.swift in Sources */,

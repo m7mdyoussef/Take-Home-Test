@@ -12,11 +12,8 @@ struct CharacterCellView: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
-            AsyncImage(url: URL(string: character.image ?? "")) { image in
-                    image.resizable()
-                } placeholder: {
-                    Image.Character.imagePlaceholder
-                }
+            
+        AsyncImageView(urlString: character.image, targetSize: CGSize(width: 70, height: 70))
                 .frame(width: 70, height: 70)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
 
