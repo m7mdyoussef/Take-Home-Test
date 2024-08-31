@@ -178,6 +178,7 @@ extension CharacterListViewController{
         DispatchQueue.main.async {
             self.alertManager.isVisible = false
             self.alertHostingController?.view.isHidden = !self.alertManager.isVisible
+            self.viewModel.loadCharacters(status: self.selectedFilter ?? CharacterStatus.All.rawValue)
         }
     }
 }

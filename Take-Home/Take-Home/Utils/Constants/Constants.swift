@@ -30,8 +30,8 @@ enum Constants{
     }
     
     enum Alert {
-        static let Error = "Error"
-        static let Ok = "OK"
+        static let error = "Error"
+        static let retry = "Retry"
     }
     
     enum CharacterDetails {

@@ -22,7 +22,7 @@ struct ErrorAlertView: View {
                 VStack {
                     VStack(spacing: 16) {
                         
-                        CharacterText(text: Constants.Alert.Error, fontSize: 30, color: .white, weight: .bold)
+                        CharacterText(text: Constants.Alert.error, fontSize: 30, color: .white, weight: .bold)
                             .multilineTextAlignment(.center)
                         
                         CharacterText(text: alertManager.message, fontSize: 18, color: .white, weight: .medium)
@@ -33,7 +33,7 @@ struct ErrorAlertView: View {
                             onDismiss()
                         }) {
                             
-                            CharacterText(text: Constants.Alert.Ok, fontSize: 24, color: .red, weight: .bold)
+                            CharacterText(text: Constants.Alert.retry, fontSize: 24, color: .red, weight: .bold)
                                 .padding()
                                 .frame(maxWidth: .infinity)
                                 .background(Color.white)
