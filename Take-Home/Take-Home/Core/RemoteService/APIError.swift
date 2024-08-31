@@ -18,13 +18,8 @@ enum APIError: Error {
     case redirection
     case clientError
     case invalidResponse(httpStatusCode: Int)
-    case statusMessage(message: String)
-    case decodingError(Error)
-    case connectionError(Error)
+    case decodingError
     case unauthorizedClient
-    case urlError(URLError)
-    case httpError(HTTPURLResponse)
-    case type(Error)
 }
 
 extension APIError {
@@ -41,17 +36,12 @@ extension APIError {
         case .clientError:                return MessageHelper.ServerError.clientError
         case .invalidResponse:            return MessageHelper.ServerError.invalidResponse
         case .unauthorizedClient:         return MessageHelper.ServerError.unauthorizedClient
-        case .statusMessage(let message): return message
-        case .decodingError(let error):   return "Decoding Error: \(error.localizedDescription)"
-        case .connectionError(let error): return "Network connection Error : \(error.localizedDescription)"
-        case .urlError(let error):        return "URL Error: \(error.localizedDescription)"
-        case .httpError(let response):    return "HTTP Error: Status code \(response.statusCode)"
-        case .type(let error):            return "Error: \(error.localizedDescription)"
+        case .decodingError:              return MessageHelper.ServerError.decodingError
         }
     }
 }
 
-extension BaseAPI {
+extension APIClient {
     static func errorType(type: Int) -> APIError {
         switch type {
         case 300..<400:
@@ -73,6 +63,29 @@ extension BaseAPI {
             return .noNetwork
         default:
             return .unknownError
+        }
+    }
+}
+
+extension APIError: Equatable{
+    static func == (lhs: APIError, rhs: APIError) -> Bool {
+        switch (lhs, rhs) {
+        case (.general, .general),
+            (.timeout, .timeout),
+            (.pageNotFound, .pageNotFound),
+            (.noData, .noData),
+            (.noNetwork, .noNetwork),
+            (.unknownError, .unknownError),
+            (.serverError, .serverError),
+            (.redirection, .redirection),
+            (.clientError, .clientError),
+            (.decodingError, .decodingError),
+            (.unauthorizedClient, .unauthorizedClient):
+            return true
+        case (.invalidResponse(let lhsCode), .invalidResponse(let rhsCode)):
+            return lhsCode == rhsCode
+        default:
+            return false
         }
     }
 }
